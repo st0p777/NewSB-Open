@@ -1,0 +1,43 @@
+{% extends 'users/base.html' %}
+{% load i18n %}
+{% load static %}
+{% block first %}
+    <form action="{% url 'Login' %}" method="post">
+        {% csrf_token %}
+        <div class="content-lg container">
+            <div class="row">
+                <h2 class="color-black">Login in Ticket System</h2>
+                <div class="col-sm-6 sm-margin-b-50">
+                    <h3 class="color-black">Username</h3>
+                    {{ form.username }}
+                    <h3 class="color-black">Password</h3>
+                    {{ form.password }}
+                    <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase">Submit</button>
+                    <a class="small" href="{% url 'Registration' %}">Create account?</a>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- End Latest Products -->
+    <div class="content-lg container">
+        <div class="row margin-b-40">
+            <div class="col-sm-6">
+                <h2>Block</h2>
+                <p>information</p>
+            </div>
+        </div>
+        <!--// end row -->
+    </div>
+    <!-- End Latest Products -->
+    <div class="content-lg container">
+        <div class="row margin-b-40">
+            <div class="col-sm-6">
+                <h2>Block</h2>
+                <p>information</p>
+            </div>
+        </div>
+        <!--// end row -->
+    </div>
+    <!-- End Latest Products -->
+{% endblock %}

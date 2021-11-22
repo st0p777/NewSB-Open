@@ -1,0 +1,11 @@
+#id_if_fast{
+    height: 15px;
+    width: 15px;
+    display:inline-block;
+    margin:0 !important;
+}
+.checkbox-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

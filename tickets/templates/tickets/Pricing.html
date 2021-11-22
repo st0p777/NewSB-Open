@@ -1,0 +1,64 @@
+{% extends 'tickets/base.html' %}
+{% load static %}
+{% block first %}
+    <!-- Pricing -->
+        <div class="bg-color-sky-light">
+            <div class="content-lg container">
+                <div class="row row-space-1">
+                    <div class="col-sm-4">
+                        <!-- Pricing -->
+                        <div class="pricing bg-color-bronze">
+                            <div class="margin-b-30">
+                                <i class="pricing-icon icon-chemistry"></i>
+                                <h3>Starter Kit</h3>
+                                <h5>€30</h5>
+                            </div>
+                            <ul class="list-unstyled pricing-list margin-b-50">
+                                <li class="pricing-list-item">Placing an analytical report in the cloud</li>
+                                <li class="pricing-list-item">Analysis update within 2 weeks after project completion</li>
+                                <li class="pricing-list-item">Preparation of a presentation with research results</li>
+                            </ul>
+                            <a href="{% url 'Pricing' %}" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
+                        </div>
+                        <!-- End Pricing -->
+                    </div>
+                    <div class="col-sm-4 sm-margin-b-2">
+                        <!-- Pricing -->
+                        <div class="pricing pricing-active bg-color-silver">
+                            <div class="margin-b-30">
+                                <i class="pricing-icon icon-badge"></i>
+                                <h3>Professional</h3>
+                                <h5>€25</h5>
+                            </div>
+                            <ul class="list-unstyled pricing-list margin-b-50">
+                                <li class="pricing-list-item">At least 10 tasks to complete</li>
+                                <li class="pricing-list-item">Edits are free</li>
+                                <li class="pricing-list-item">Project result in Excel</li>
+                            </ul>
+                            <a href="{% url 'Pricing' %}" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
+                        </div>
+                        <!-- End Pricing -->
+                    </div>
+                    <div class="col-sm-4">
+                        <!-- Pricing -->
+                        <div class="pricing bg-color-gold">
+                            <div class="margin-b-30">
+                                <i class="pricing-icon icon-shield"></i>
+                                <h3>Advanced</h3>
+                                <h5>Description</h5>
+                            </div>
+                            <ul class="list-unstyled pricing-list margin-b-50">
+                                <li class="pricing-list-item">1</li>
+                                <li class="pricing-list-item">2</li>
+                                <li class="pricing-list-item">3</li>
+                            </ul>
+                            <a href="{% url 'Pricing' %}" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
+                        </div>
+                        <!-- End Pricing -->
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End Pricing -->
+{% endblock %}

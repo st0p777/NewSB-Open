@@ -1,0 +1,27 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block first %}
+    <div class="content-lg container">
+        <div class="row">
+            <h2 class="color-black">Create account</h2>
+            <form action="{% url 'Registration' %}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-6 sm-margin-b-50">
+                    <h3 class="color-black">First name</h3>
+                    {{ form.first_name }}
+                    <h3 class="color-black">Last name</h3>
+                    {{ form.last_name }}
+                    <h3 class="color-black">Email</h3>
+                    {{ form.username }}
+                    <h3 class="color-black">Password</h3>
+                    {{ form.password1 }}
+                    <h3 class="color-black">Repeat password</h3>
+                    {{ form.password2 }}
+                    <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase">Submit</button>
+                    <div class="small"><a href="{% url 'Login' %}">You have account? Login</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

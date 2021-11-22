@@ -1,0 +1,95 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block first %}
+<!--========== PAGE LAYOUT ==========-->
+        <!-- Service -->
+        <div class="bg-color-sky-light" data-auto-height="true">
+
+            <div class="content-lg container">
+                <div class="row row-space-1 margin-b-2">
+                    <div class="col-sm-4 sm-margin-b-2">
+                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
+                            <div class="service">
+                                <div class="service-info">
+                                    <h3>Profile settings</h3>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% if form.is_superuser or not form.is_staff %}
+                    <div class="col-sm-4 sm-margin-b-2">
+                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".2s">
+                            <div class="service">
+                                <div class="service-info">
+                                    <h3>My Tickets</h3>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <!--// end row -->
+                {% if not form.is_staff %}
+                <div class="row row-space-1">
+                    <h3>For manager</h3>
+                    <div class="col-sm-4 sm-margin-b-2">
+                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".4s">
+                            <div class="service">
+                                <div class="service-info">
+                                    <h3>Ticker board</h3>
+                                </div>
+                                <a href="{% url 'Ticket_list' %}" class="content-wrapper-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 sm-margin-b-2">
+                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".4s">
+                            <div class="service">
+                                <div class="service-info">
+                                    <h3>Feedback board</h3>
+                                </div>
+                                <a href="{% url 'Feed_list' %}" class="content-wrapper-link"></a>
+                            </div>
+                        </div>
+                    </div>
+{#                    <div class="col-sm-4 sm-margin-b-2">#}
+{#                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".5s">#}
+{#                            <div class="service">#}
+{#                                <div class="service-info">#}
+{#                                    <h3>Convenience and speed of execution</h3>#}
+{#                                </div>#}
+{#                                <a href="#" class="content-wrapper-link"></a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-sm-4">#}
+{#                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".6s">#}
+{#                            <div class="service">#}
+{#                                <div class="service-info">#}
+{#                                    <h3>Assessment of market volume and trends</h3>#}
+{#                                </div>#}
+{#                                <a href="#" class="content-wrapper-link"></a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+                </div>
+                {% endif %}
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End Service -->
+
+        <!-- Latest Products -->
+        <div class="content-lg container">
+            <div class="row margin-b-40">
+                <div class="col-sm-6">
+                    <h2>Block</h2>
+                    <p>information</p>
+                </div>
+            </div>
+            <!--// end row -->
+        </div>
+        <!-- End Latest Products -->
+{% endblock %}
